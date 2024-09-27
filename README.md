@@ -1,4 +1,5 @@
 # Project File Tree
+```bash
 .
 ├── Report.pdf            # description of the project's design and results
 ├── client.py             # Client-side code for connecting to the server and receiving global model parameters
@@ -7,6 +8,11 @@
 ├── model.py              # Module for model definition, containing the definition of the LeNet model
 ├── param.yaml            # Configuration file containing parameters required during training
 └── test_device.py       # Script for testing the availability of MPS, checking if the service is working properly
+```
+
+# PipeLine of the system 
+<img width="948" alt="image" src="https://github.com/user-attachments/assets/f23bba70-96f5-4f1d-86f6-37814d038efb">
+
 
 # Usage
 First you should move the `FL_Data` directory to the parent directory of your current location.
@@ -21,6 +27,5 @@ If the mps device is selected in the param.yaml file, please run the following c
 python fl_system.py --config <the directory of param.yaml>
 ```
 
-
 # Parameters
-See param.yaml for details.
+See [param.yaml](./param.yaml) for details.
