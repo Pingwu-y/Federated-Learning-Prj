@@ -1,3 +1,8 @@
+# Project Overview
+This project implements a system that simulates training a classification model on the **BloodMNIST** dataset using horizontal **federated learning**.
+
+The dataset is pre-partitioned into a fixed number of clients, each simulating a distinct participant in the federated learning process.
+
 # Project File Tree
 ```bash
 .
@@ -15,17 +20,19 @@
 
 
 # Usage
-First you should move the `FL_Data` directory to the parent directory of your current location.
+Before running the system, move the `FL_Data` directory to the parent directory of your current location.
 
-Please note that you can specify the device by setting the device field in the param.yaml file to either cuda or mps.
+You can specify the device for computation (either cuda or mps) by setting the appropriate field in the param.yaml configuration file.
+
+To test the device availability, use the following command:
+
 ```shell
 python test_device.py
 ```
-If the mps device is selected in the param.yaml file, please run the following command to test if mps is available on the current device.
-
+If the mps device is selected in the param.yaml file, please run the following command to run the whole system.
 ```shell
 python fl_system.py --config <the directory of param.yaml>
 ```
 
 # Parameters
-See [param.yaml](./param.yaml) for details.
+Details regarding the system’s parameters can be found in the [param.yaml](./param.yaml) configuration file.
