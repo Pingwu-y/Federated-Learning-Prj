@@ -1,0 +1,29 @@
+# device:cuda or mps(mps is for arm)
+device: mps
+
+# online params
+port: 2000
+server_address: 123.249.114.114
+# server_address: localhost 
+buffer_size: 10000
+
+# running mode: online or offline
+mode: online
+
+# dataset and checkpoint path
+data_dir: ./Data_BloodMNIST/
+client_ckp_dir: ./check/client/
+global_ckp_dir: ./check/global/
+
+# client params
+n_clients: 20
+# param M in the description
+n_update_clients: 15
+
+# training params
+input_size: 28 # input size of the image in Data_BloodMNIST
+output_channel: 8
+batch_size: 32
+n_rounds: 20
+n_epochs: 50
+lr: 0.01 #learning rate
